@@ -2,12 +2,12 @@
 
 const { error, log } = require("console");
 const fs = require("fs");
-/*const quote = "Everything Happens For A Reason ";
+//const quote = "Everything Happens For A Reason ";
 
 const [, , noOfFiles] = process.argv;
 console.log(noOfFiles);
 
-for (let i = 1; i <= noOfFiles; i++) {
+/*for (let i = 1; i <= noOfFiles; i++) {
   fs.writeFile(`Note-${i}.word`, quote, (err) => {
     console.log(`Completed Writing Note-${i}.word`);
   });
@@ -49,7 +49,7 @@ for (let i = 1; i <= 10; i++) {
 
 fs.readdir("./All Files", (err, data) => {
   console.log(data);
-});*/
+});
 // "readdir" helps to view the bulk file in string method in Terminal.....
 
 fs.readdir("./All Files", (err, data) => {
@@ -66,3 +66,16 @@ fs.readdir("./All Files", (err, data) => {
 //  writeFile => callStack => WebAPI (Whoever finishes first) => callback Q => callStack
 //  To bring all the files in order we can use sync cmd.....
 //  where the files are on ordered  async has been used ...
+
+const niceQuote2 = "Be Yourself";
+fs.writeFileSync("New.html", niceQuote2);
+console.log("Completed Writing  New.html");
+*/
+const quote3 = "Everything will be alright";
+
+for (let i = 1; i <= noOfFiles; i++) {
+  fs.writeFileSync(`./All Files/New-${i}.word`, quote3, (err) => {
+    console.log(`Completed Writing New-${i}.word`);
+  });
+}
+// The file have been created in order because we have used "writefileSync"
