@@ -61,5 +61,8 @@ fs.readdir("./All Files", (err, data) => {
 });
 // deleting bulk files using use bracket......
 
-//fs.writeFile , fs.readFile , fs.appendFile , fs.unlink => Async
-//fs.writeSync , fs.readFileSync , fs.appendFileSync ,fs.unlinkSync => Sync
+//  fs.writeFile , fs.readFile , fs.appendFile , fs.unlink => Async
+//  fs.writeSync , fs.readFileSync , fs.appendFileSync ,fs.unlinkSync => Sync
+//  writeFile => callStack => WebAPI (Whoever finishes first) => callback Q => callStack
+//  To bring all the files in order we can use sync cmd.....
+//  where the files are on ordered  async has been used ...
